@@ -31,6 +31,9 @@ migrate:
 dev-server:
 	poetry run python3 manage.py runserver
 
+deploy:
+	make install
+	make migrate
 
 PORT ?= 8000
 product-server:
