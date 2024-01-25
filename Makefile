@@ -42,5 +42,5 @@ product-server:
 
 fast-commit:
 	git add *
-	git commit -m 'fast commit'
+	git commit -m 'fast commit: small fixes'
 	git push
