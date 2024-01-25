@@ -38,3 +38,9 @@ deploy:
 PORT ?= 8000
 product-server:
 	poetry run gunicorn -w 5 -b 0.0.0.0:$(PORT) task_manager.wsgi
+
+
+fast-commit:
+	git add *
+	git commit -m 'fast commit'
+	git push
