@@ -1,1 +1,8 @@
-<h1>main page</h1>
+{% extends "layouts/frame.html" %}
+{% load i18n %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+<h1 class="display-3">{% translate "Task manager" %}</h1>
+<p class="lead">{% translate "About task manager" %}</p>
+{% endblock %}
