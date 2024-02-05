@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-05 22:29+0500\n"
+"POT-Creation-Date: 2024-02-05 23:58+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,6 +75,18 @@ msgstr "Регистрация"
 msgid "Register"
 msgstr "Зарегистрировать"
 
+#: task_manager/templates/users/delete.html:7
+msgid "User deletion"
+msgstr "Удаление пользователя"
+
+#: task_manager/templates/users/delete.html:10
+msgid "Confirm user deletion"
+msgstr "Вы уверены, что хотите удалить"
+
+#: task_manager/templates/users/delete.html:12
+msgid "Yes, delete"
+msgstr "Да, удалить"
+
 #: task_manager/templates/users/index.html:11
 msgid "ID"
 msgstr "ID"
@@ -96,12 +108,17 @@ msgid "Actions"
 msgstr "Действия"
 
 #: task_manager/templates/users/index.html:26
+#: task_manager/templates/users/update.html:11
 msgid "Update"
 msgstr "Изменить"
 
 #: task_manager/templates/users/index.html:28
 msgid "Delete"
 msgstr "Удалить"
+
+#: task_manager/templates/users/update.html:7
+msgid "User updating"
+msgstr "Изменение пользователя"
 
 #: task_manager/users/forms.py:10
 msgid "First name"
@@ -111,6 +128,14 @@ msgstr "Имя"
 msgid "Last name"
 msgstr "Фамилия"
 
-#: task_manager/users/views.py:25
+#: task_manager/users/views.py:28
 msgid "Registration successful"
 msgstr "Пользователь успешно зарегистрирован"
+
+#: task_manager/users/views.py:36
+msgid "User updation successful"
+msgstr "Пользователь успешно изменен"
+
+#: task_manager/users/views.py:43
+msgid "User deletion successful"
+msgstr "Пользователь успешно удален"
