@@ -1,3 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-# Create your models here.
+
+User.full_name = property(lambda self: self.get_full_name())

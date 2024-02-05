@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-05 20:42+0500\n"
+"POT-Creation-Date: 2024-02-05 22:29+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,6 +42,7 @@ msgid "Source"
 msgstr "Исходный код проекта"
 
 #: task_manager/templates/layouts/navbar.html:9
+#: task_manager/templates/users/index.html:7
 msgid "Users"
 msgstr "Пользователи"
 
@@ -66,5 +67,50 @@ msgid "Enterance"
 msgstr "Вход"
 
 #: task_manager/templates/layouts/navbar.html:29
+#: task_manager/templates/users/create.html:7
 msgid "Registration"
 msgstr "Регистрация"
+
+#: task_manager/templates/users/create.html:11
+msgid "Register"
+msgstr "Зарегистрировать"
+
+#: task_manager/templates/users/index.html:11
+msgid "ID"
+msgstr "ID"
+
+#: task_manager/templates/users/index.html:12
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: task_manager/templates/users/index.html:13
+msgid "Full name"
+msgstr "Полное имя"
+
+#: task_manager/templates/users/index.html:14
+msgid "Created at"
+msgstr "Дата создания"
+
+#: task_manager/templates/users/index.html:15
+msgid "Actions"
+msgstr "Действия"
+
+#: task_manager/templates/users/index.html:26
+msgid "Update"
+msgstr "Изменить"
+
+#: task_manager/templates/users/index.html:28
+msgid "Delete"
+msgstr "Удалить"
+
+#: task_manager/users/forms.py:10
+msgid "First name"
+msgstr "Имя"
+
+#: task_manager/users/forms.py:15
+msgid "Last name"
+msgstr "Фамилия"
+
+#: task_manager/users/views.py:25
+msgid "Registration successful"
+msgstr "Пользователь успешно зарегистрирован"
