@@ -19,11 +19,15 @@
                 <a class="nav-link" href="/">{% translate "Tasks" %}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/">{% translate "Logout" %}</a>
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    {% translate "Logout" as action %}
+                    {% bootstrap_button action button_type="submit" button_class="nav-link" %}
+                </form>
             </li>
             {% else %}
             <li class="nav-item">
-                <a class="nav-link" href="/">{% translate "Enterance" %}</a>
+                <a class="nav-link" href="{% url 'login' %}">{% translate "Enterance" %}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'create_user' %}">{% translate "Registration" %}</a>

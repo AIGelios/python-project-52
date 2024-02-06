@@ -1,7 +1,8 @@
+from task_manager import gettext_lazy
 from django.contrib.auth.forms import UserCreationForm
 from django.forms import CharField
-from django.utils.translation import gettext_lazy
 from .models import User
+
 
 class UserForm(UserCreationForm):
     first_name = CharField(

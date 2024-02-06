@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-05 23:58+0500\n"
+"POT-Creation-Date: 2024-02-06 22:41+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,10 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: task_manager/mixins.py:11
+msgid "Forbidden. Please log in."
+msgstr ""
 
 #: task_manager/templates/index.html:6
 #: task_manager/templates/layouts/frame.html:12
@@ -58,18 +62,23 @@ msgstr "Метки"
 msgid "Tasks"
 msgstr "Задачи"
 
-#: task_manager/templates/layouts/navbar.html:22
+#: task_manager/templates/layouts/navbar.html:24
 msgid "Logout"
 msgstr "Выход"
 
-#: task_manager/templates/layouts/navbar.html:26
+#: task_manager/templates/layouts/navbar.html:30
+#: task_manager/templates/login.html:7
 msgid "Enterance"
 msgstr "Вход"
 
-#: task_manager/templates/layouts/navbar.html:29
+#: task_manager/templates/layouts/navbar.html:33
 #: task_manager/templates/users/create.html:7
 msgid "Registration"
 msgstr "Регистрация"
+
+#: task_manager/templates/login.html:11
+msgid "Login"
+msgstr ""
 
 #: task_manager/templates/users/create.html:11
 msgid "Register"
@@ -79,11 +88,11 @@ msgstr "Зарегистрировать"
 msgid "User deletion"
 msgstr "Удаление пользователя"
 
-#: task_manager/templates/users/delete.html:10
+#: task_manager/templates/users/delete.html:9
 msgid "Confirm user deletion"
 msgstr "Вы уверены, что хотите удалить"
 
-#: task_manager/templates/users/delete.html:12
+#: task_manager/templates/users/delete.html:11
 msgid "Yes, delete"
 msgstr "Да, удалить"
 
@@ -120,11 +129,11 @@ msgstr "Удалить"
 msgid "User updating"
 msgstr "Изменение пользователя"
 
-#: task_manager/users/forms.py:10
+#: task_manager/users/forms.py:11
 msgid "First name"
 msgstr "Имя"
 
-#: task_manager/users/forms.py:15
+#: task_manager/users/forms.py:16
 msgid "Last name"
 msgstr "Фамилия"
 
@@ -132,10 +141,22 @@ msgstr "Фамилия"
 msgid "Registration successful"
 msgstr "Пользователь успешно зарегистрирован"
 
-#: task_manager/users/views.py:36
+#: task_manager/users/views.py:41
 msgid "User updation successful"
 msgstr "Пользователь успешно изменен"
 
-#: task_manager/users/views.py:43
+#: task_manager/users/views.py:43 task_manager/users/views.py:58
+msgid "User only can update himself"
+msgstr "У вас нет прав для изменения другого пользователя."
+
+#: task_manager/users/views.py:56
 msgid "User deletion successful"
 msgstr "Пользователь успешно удален"
+
+#: task_manager/views.py:15
+msgid "Logged in successfully"
+msgstr "Вы залогинены"
+
+#: task_manager/views.py:20
+msgid "Logged out successfully"
+msgstr "Вы разлогинены"
