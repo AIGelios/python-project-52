@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-06 22:41+0500\n"
+"POT-Creation-Date: 2024-02-08 17:13+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,28 @@ msgstr ""
 
 #: task_manager/mixins.py:11
 msgid "Forbidden. Please log in."
-msgstr ""
+msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
+
+#: task_manager/statuses/forms.py:10
+#: task_manager/templates/statuses/index.html:13
+msgid "Name"
+msgstr "Имя"
+
+#: task_manager/statuses/views.py:28
+msgid "Status created successfully"
+msgstr "Статус успешно создан"
+
+#: task_manager/statuses/views.py:40
+msgid "Status updated successfully"
+msgstr "Статус успешно изменен"
+
+#: task_manager/statuses/views.py:52
+msgid "Status deleted successfully"
+msgstr "Статус успешно удален"
+
+#: task_manager/statuses/views.py:54
+msgid "Unable to delete status"
+msgstr "Невозможно удалить статус, потому что он используется"
 
 #: task_manager/templates/index.html:6
 #: task_manager/templates/layouts/frame.html:12
@@ -37,11 +58,11 @@ msgstr ""
 "назначать исполнителей и менять их статусы. Для работы с системой требуется "
 "регистрация и аутентификация"
 
-#: task_manager/templates/layouts/footer.html:5
+#: task_manager/templates/layouts/footer.html:6
 msgid "My Github"
 msgstr "Мой профиль на Github"
 
-#: task_manager/templates/layouts/footer.html:6
+#: task_manager/templates/layouts/footer.html:7
 msgid "Source"
 msgstr "Исходный код проекта"
 
@@ -51,6 +72,7 @@ msgid "Users"
 msgstr "Пользователи"
 
 #: task_manager/templates/layouts/navbar.html:13
+#: task_manager/templates/statuses/index.html:7
 msgid "Statuses"
 msgstr "Статусы"
 
@@ -78,7 +100,60 @@ msgstr "Регистрация"
 
 #: task_manager/templates/login.html:11
 msgid "Login"
-msgstr ""
+msgstr "Войти"
+
+#: task_manager/templates/statuses/create.html:7
+#: task_manager/templates/statuses/index.html:8
+msgid "Create status"
+msgstr "Создать статус"
+
+#: task_manager/templates/statuses/create.html:11
+msgid "Create"
+msgstr "Создать"
+
+#: task_manager/templates/statuses/delete.html:7
+msgid "Status deletion"
+msgstr "Удаление статуса"
+
+#: task_manager/templates/statuses/delete.html:9
+msgid "Confirm status deletion"
+msgstr "Вы уверены, что хотите удалить"
+
+#: task_manager/templates/statuses/delete.html:11
+#: task_manager/templates/users/delete.html:11
+msgid "Yes, delete"
+msgstr "Да, удалить"
+
+#: task_manager/templates/statuses/index.html:12
+#: task_manager/templates/users/index.html:11
+msgid "ID"
+msgstr "ID"
+
+#: task_manager/templates/statuses/index.html:14
+#: task_manager/templates/users/index.html:14
+msgid "Created at"
+msgstr "Дата создания"
+
+#: task_manager/templates/statuses/index.html:15
+#: task_manager/templates/users/index.html:15
+msgid "Actions"
+msgstr "Действия"
+
+#: task_manager/templates/statuses/index.html:25
+#: task_manager/templates/statuses/update.html:11
+#: task_manager/templates/users/index.html:26
+#: task_manager/templates/users/update.html:11
+msgid "Update"
+msgstr "Изменить"
+
+#: task_manager/templates/statuses/index.html:27
+#: task_manager/templates/users/index.html:28
+msgid "Delete"
+msgstr "Удалить"
+
+#: task_manager/templates/statuses/update.html:7
+msgid "Status updating"
+msgstr "Изменение статуса"
 
 #: task_manager/templates/users/create.html:11
 msgid "Register"
@@ -92,14 +167,6 @@ msgstr "Удаление пользователя"
 msgid "Confirm user deletion"
 msgstr "Вы уверены, что хотите удалить"
 
-#: task_manager/templates/users/delete.html:11
-msgid "Yes, delete"
-msgstr "Да, удалить"
-
-#: task_manager/templates/users/index.html:11
-msgid "ID"
-msgstr "ID"
-
 #: task_manager/templates/users/index.html:12
 msgid "Username"
 msgstr "Имя пользователя"
@@ -107,23 +174,6 @@ msgstr "Имя пользователя"
 #: task_manager/templates/users/index.html:13
 msgid "Full name"
 msgstr "Полное имя"
-
-#: task_manager/templates/users/index.html:14
-msgid "Created at"
-msgstr "Дата создания"
-
-#: task_manager/templates/users/index.html:15
-msgid "Actions"
-msgstr "Действия"
-
-#: task_manager/templates/users/index.html:26
-#: task_manager/templates/users/update.html:11
-msgid "Update"
-msgstr "Изменить"
-
-#: task_manager/templates/users/index.html:28
-msgid "Delete"
-msgstr "Удалить"
 
 #: task_manager/templates/users/update.html:7
 msgid "User updating"
