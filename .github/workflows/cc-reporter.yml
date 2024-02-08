@@ -26,10 +26,13 @@ jobs:
           pip install poetry
           make install
           pip install coverage
-      - name: Test & publish code coverage
+      - name: Test & calculate coverage
+        run: |
+          poetry run python3 -m coverage run manage.py test
+      - name: Publish code coverage
         uses: paambaati/codeclimate-action@v5.0.0
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_CODE }}
         with:
-          coverageCommand: make test-cov
+          coverageCommand: python3 -m coverage xml
           debug: true
