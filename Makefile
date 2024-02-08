@@ -19,10 +19,14 @@ lint:
 test:
 	poetry run python3 manage.py test
 
+test-cov:
+	poetry run coverage run --source='.' manage.py test
+	poetry run coverage xml
+
 check:
 	make selfcheck
 	make lint
-	make test
+	make test-cov
 
 migrate:
 	poetry run python3 manage.py makemigrations
@@ -42,5 +46,5 @@ product-server:
 
 fast-commit:
 	git add *
-	git commit -m 'fast commit: small fixes'
+	git commit -m 'fast commit: minor fixes'
 	git push

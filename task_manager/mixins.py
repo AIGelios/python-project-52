@@ -1,4 +1,4 @@
-from task_manager import gettext_lazy, messages, redirect
+from task_manager import gettext_lazy, messages, redirect, reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin  # noqa
 from django.db.models import ProtectedError
@@ -9,7 +9,7 @@ class AuthenticationRequiredMixin(LoginRequiredMixin):
         if request.user.is_authenticated:
             return super().dispatch(request, *args, **kwargs)
         messages.error(request, gettext_lazy('Forbidden. Please log in.'))
-        return redirect('/')
+        return redirect(reverse_lazy('login'))
 
 
 class PermissionMixin(UserPassesTestMixin):
