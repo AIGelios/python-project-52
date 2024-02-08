@@ -3,7 +3,7 @@ from task_manager.users.models import User
 
 
 class DeleteUserTest(TransactionTestCase):
-    fixtures = ['database.json']
+    fixtures = ['users_database.json']
 
     def test_only_logged_user_can_delete(self):
         response = self.client.post(

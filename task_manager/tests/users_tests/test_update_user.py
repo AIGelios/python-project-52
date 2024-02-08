@@ -11,7 +11,7 @@ with open(fixture_file_path) as fixture_file:
 
 
 class UpdateUserTest(TransactionTestCase):
-    fixtures = ['database.json']
+    fixtures = ['users_database.json']
     username = TEST_USER.get('username')
 
     def test_only_logged_user_can_update(self):

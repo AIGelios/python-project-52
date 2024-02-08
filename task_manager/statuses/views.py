@@ -53,6 +53,3 @@ class StatusDeleteView(
     success_url = statuses_url
     delete_protection_message = gettext_lazy('Unable to delete status')
     delete_protection_url = statuses_url
-
-
-

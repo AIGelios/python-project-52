@@ -1,0 +1,20 @@
+[
+    {
+      "model": "auth.user",
+      "pk": 1,
+      "fields": {
+        "first_name": "Elon",
+        "last_name": "Musk",
+        "username": "MuskElon",
+        "password": "goodp@ssword"
+      }
+    },
+    {
+      "model": "statuses.status",
+      "pk": 1,
+      "fields": {
+        "created_at": "2024-02-07T08:41:56.579Z",
+        "name": "init"
+       }
+    }
+  ]
