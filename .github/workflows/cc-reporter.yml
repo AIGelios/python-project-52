@@ -1,4 +1,4 @@
-name: cc-reporter
+name: CodeClimate coverage reporter
 
 on:
   push:
