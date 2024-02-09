@@ -13,7 +13,7 @@ with open(fixture_file_path) as fixture_file:
 class CreateUserTest(TestCase):
     create_user_url = reverse_lazy('create_user')
 
-    def test_create_page(self):
+    def test_create_user_page(self):
         response = self.client.get(self.create_user_url)
         self.assertEqual(response.status_code, 200)
 

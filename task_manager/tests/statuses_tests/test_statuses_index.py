@@ -13,7 +13,6 @@ class StatusesIndexTest(TestCase):
         self.assertEqual(response.status_code, 302)
 
     def test_statuses_index_with_login(self):
-        user = User.objects.get(pk=1)
-        self.client.force_login(user=user)
+        self.client.force_login(user=User.objects.get(pk=1))
         response = self.client.get(statuses_url)
         self.assertEqual(response.status_code, 200)

@@ -25,3 +25,6 @@ class UserForm(UserCreationForm):
             'password1',
             'password2',
         )
+
+    def clean_username(self):
+        return self.cleaned_data.get('username')
