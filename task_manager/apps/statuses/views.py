@@ -51,5 +51,5 @@ class StatusDeleteView(
     model = Status
     success_message = gettext_lazy('Status deleted successfully')
     success_url = statuses_url
-    delete_protection_message = gettext_lazy('Unable to delete status')
+    delete_protection_message = gettext_lazy('Unable to delete. Status is busy.')
     delete_protection_url = statuses_url

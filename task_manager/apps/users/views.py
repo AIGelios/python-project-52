@@ -56,3 +56,5 @@ class UserDeleteView(
     success_message = gettext_lazy('User deletion successful')
     permission_denied_url = success_url
     permission_denied_message = gettext_lazy('User only can update himself')
+    delete_protection_url = success_url
+    delete_protection_message = gettext_lazy('Unable to delete. User is busy.')
