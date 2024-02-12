@@ -1,0 +1,49 @@
+{% extends "layouts/frame.html" %}
+{% load i18n %}
+
+{% block content %}
+<main>
+    <div class="container wrapper flex-grow-1">
+        <h2 class="text-center my-4">{% translate "Task details" %}</h2>
+
+        <div class="card">
+            <div class="card-header bg-secondary text-white">
+                <h2>{{ task.name }}</h2>
+            </div>
+    
+            <div class="card-body bg-light">
+                <p>{{ task.description }}</p>
+                <hr>
+                <div class="container">
+                    <div class="row p-1">
+                        <div class="col">{% translate 'Author' %}</div>
+                        <div class="col">{{ task.author }}</div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col">{% translate 'Performer' %}</div>
+                        <div class="col">{{ task.performer }}</div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col">{% translate 'Status' %}</div>
+                        <div class="col">{{ task.status }}</div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col">{% translate 'Created at' %}</div>
+                        <div class="col">{{ task.created_at|date:"d.m.Y H:i" }}</div>
+                    </div>
+                    <div class="row p-1">
+                        <ul>
+                            <h6>{% translate 'Labels' %}:</h6>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="container">
+                    <a class="btn btn-primary mb-3" href="{% url 'update_task' task.id %}">{% translate 'Update' %}</a>
+                    <a class="btn btn-primary mb-3" href="{% url 'delete_task' task.id %}">{% translate 'Delete' %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -1,4 +1,4 @@
-from task_manager import gettext_lazy, reverse_lazy
+from task_manager.apps.tools import gettext_lazy, reverse_lazy
 from .models import User
 from .forms import UserForm
 from django.views.generic import (

@@ -1,5 +1,5 @@
-from task_manager import TestCase, reverse_lazy
-from task_manager.users.models import User
+from task_manager.apps.tools import TestCase, reverse_lazy
+from task_manager.apps.users.models import User
 
 
 statuses_url = reverse_lazy('statuses_index')

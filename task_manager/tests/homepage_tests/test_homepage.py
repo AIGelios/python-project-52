@@ -1,4 +1,4 @@
-from task_manager import SimpleTestCase, reverse_lazy
+from task_manager.apps.tools import SimpleTestCase, reverse_lazy
 
 
 class HomepageTest(SimpleTestCase):

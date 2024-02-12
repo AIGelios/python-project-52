@@ -11,6 +11,7 @@ urlpatterns = [
     path('', HomePageView.as_view(), name='homepage'),
     path('login/', TaskManLoginView.as_view(), name='login'),
     path('logout/', TaskManLogoutView.as_view(), name='logout'),
-    path('users/', include('task_manager.users.urls')),
-    path('statuses/', include('task_manager.statuses.urls')),
+    path('users/', include('task_manager.apps.users.urls')),
+    path('statuses/', include('task_manager.apps.statuses.urls')),
+    path('tasks/', include('task_manager.apps.tasks.urls'))
 ]

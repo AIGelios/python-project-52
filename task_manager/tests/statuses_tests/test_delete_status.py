@@ -1,6 +1,6 @@
-from task_manager.users.models import User
-from task_manager.statuses.models import Status
-from task_manager import TestCase, reverse_lazy
+from task_manager.apps.users.models import User
+from task_manager.apps.statuses.models import Status
+from task_manager.apps.tools import TestCase, reverse_lazy
 
 
 def delete_status_url(status_id):
@@ -23,7 +23,7 @@ class DeleteStatusTest(TestCase):
         self.assertEqual(Status.objects.all().count(), 1)
         self.client.post(delete_status_url(1))
         self.assertEqual(Status.objects.all().count(), 1)
-    
+
     def test_delete_status_with_login(self):
         self.client.force_login(user=User.objects.get(pk=1))
         self.assertEqual(Status.objects.all().count(), 1)

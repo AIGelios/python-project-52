@@ -1,4 +1,4 @@
-from task_manager import gettext_lazy, reverse_lazy, messages
+from task_manager.apps.tools import gettext_lazy, reverse_lazy, messages
 from django.views.generic.base import TemplateView
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.forms import AuthenticationForm

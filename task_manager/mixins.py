@@ -1,6 +1,11 @@
-from task_manager import gettext_lazy, messages, redirect, reverse_lazy
+from task_manager.apps.tools import (
+    gettext_lazy,
+    messages,
+    redirect,
+    reverse_lazy,
+)
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.contrib.messages.views import SuccessMessageMixin  # noqa
+from django.contrib.messages.views import SuccessMessageMixin  # noqa , just for outer imports
 from django.db.models import ProtectedError
 
 
@@ -13,7 +18,8 @@ class AuthenticationRequiredMixin(LoginRequiredMixin):
 
 
 class PermissionMixin(UserPassesTestMixin):
-    permission_denied_url = ''
+    permission_denied_message = ''
+    permission_denied_url = '/'
 
     def test_func(self):
         return self.request.user == self.get_object()
@@ -25,7 +31,7 @@ class PermissionMixin(UserPassesTestMixin):
 
 class DeleteProtectionMixin:
     delete_protection_message = ''
-    delete_protection_url = ''
+    delete_protection_url = '/'
 
     def post(self, request, *args, **kwargs):
         try:
@@ -33,3 +39,15 @@ class DeleteProtectionMixin:
         except ProtectedError:
             messages.error(request, self.delete_protection_message)
             return redirect(self.delete_protection_url)
+
+
+class OnlyAuthorCanDeleteTaskMixin(UserPassesTestMixin):
+    not_an_author_message = ''
+    not_an_author_url = '/'
+
+    def test_func(self):
+        return self.request.user == self.get_object().author
+
+    def handle_no_permission(self):
+        messages.error(self.request, self.not_an_author_message)
+        return redirect(self.not_an_author_url)

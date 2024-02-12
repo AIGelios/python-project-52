@@ -1,6 +1,6 @@
-from task_manager.users.models import User
-from task_manager.statuses.models import Status
-from task_manager import reverse_lazy, TestCase
+from task_manager.apps.users.models import User
+from task_manager.apps.statuses.models import Status
+from task_manager.apps.tools import reverse_lazy, TestCase
 
 
 create_status_url = reverse_lazy('create_status')

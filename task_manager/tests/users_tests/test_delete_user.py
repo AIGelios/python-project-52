@@ -1,5 +1,5 @@
-from task_manager import TransactionTestCase, reverse_lazy
-from task_manager.users.models import User
+from task_manager.apps.tools import TransactionTestCase, reverse_lazy
+from task_manager.apps.users.models import User
 
 
 class DeleteUserTest(TransactionTestCase):
