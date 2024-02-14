@@ -1,20 +1,20 @@
 [
-    {
-      "model": "auth.user",
-      "pk": 1,
-      "fields": {
-        "first_name": "Test first name",
-        "last_name": "Test last name",
-        "username": "test_user",
-        "password": "goodp@ssword"
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "first_name": "Name1",
+      "last_name": "Surname1",
+      "username": "Username1",
+      "password": "goodp@ssword"
       }
     },
-    {
-      "model": "statuses.status",
-      "pk": 1,
-      "fields": {
-        "created_at": "2024-02-07T08:41:56.579Z",
-        "name": "Test status 1"
-       }
+  {
+    "model": "statuses.status",
+    "pk": 1,
+    "fields": {
+      "created_at": "2024-02-07T08:41:56.579Z",
+      "name": "Test status 1"
+      }
     }
-  ]
+]

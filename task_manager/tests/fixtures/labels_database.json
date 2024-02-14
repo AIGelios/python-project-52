@@ -1,0 +1,20 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+        "first_name": "Name1",
+        "last_name": "Surname1",
+        "username": "Username1",
+        "password": "goodp@ssword"
+        }
+    },
+    {
+        "model": "labels.label",
+        "pk": 1,
+        "fields": {
+        "created_at": "2024-02-14T08:41:56.579Z",
+        "name": "Test label 1"
+        }
+    }
+]
