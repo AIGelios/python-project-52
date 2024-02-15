@@ -1,5 +1,5 @@
 from django.forms import ModelForm, CharField
-from task_manager.apps.tools import gettext_lazy
+from task_manager.tools import gettext_lazy
 from .models import Status
 
 

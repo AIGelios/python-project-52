@@ -1,6 +1,6 @@
 from task_manager.apps.users.models import User
 from task_manager.apps.labels.models import Label
-from task_manager.apps.tools import TestCase, reverse_lazy
+from task_manager.tools import TestCase, reverse_lazy
 
 
 def update_label_url(label_id):

@@ -1,6 +1,6 @@
 from task_manager.apps.users.models import User
 from task_manager.apps.labels.models import Label
-from task_manager.apps.tools import reverse_lazy, TestCase
+from task_manager.tools import reverse_lazy, TestCase
 
 
 create_label_url = reverse_lazy('create_label')

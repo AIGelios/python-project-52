@@ -1,4 +1,4 @@
-from task_manager.apps.tools import reverse_lazy, gettext_lazy  # noqa
+from task_manager.tools import reverse_lazy, gettext_lazy  # noqa
 from .models import Task
 from .forms import TaskForm
 from .filters import TaskFilterSet

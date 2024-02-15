@@ -1,6 +1,6 @@
 from task_manager.apps.users.models import User
 from task_manager.apps.tasks.models import Task
-from task_manager.apps.tools import reverse_lazy, TransactionTestCase
+from task_manager.tools import reverse_lazy, TransactionTestCase
 
 
 update_task_url = reverse_lazy('update_task', kwargs={'pk': 1})

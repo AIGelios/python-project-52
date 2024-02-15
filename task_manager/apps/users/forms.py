@@ -1,4 +1,4 @@
-from task_manager.apps.tools import gettext_lazy
+from task_manager.tools import gettext_lazy
 from django.contrib.auth.forms import UserCreationForm
 from django.forms import CharField
 from .models import User

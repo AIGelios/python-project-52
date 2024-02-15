@@ -1,4 +1,4 @@
-from task_manager.apps.tools import reverse_lazy, gettext_lazy  # noqa
+from task_manager.tools import reverse_lazy, gettext_lazy  # noqa
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView  # noqa
 from task_manager.mixins import (
     AuthenticationRequiredMixin,

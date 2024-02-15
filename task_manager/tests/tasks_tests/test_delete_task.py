@@ -1,6 +1,6 @@
 from task_manager.apps.users.models import User
 from task_manager.apps.tasks.models import Task
-from task_manager.apps.tools import reverse_lazy, TransactionTestCase
+from task_manager.tools import reverse_lazy, TransactionTestCase
 
 
 delete_task_url = reverse_lazy('delete_task', kwargs={'pk': 1})

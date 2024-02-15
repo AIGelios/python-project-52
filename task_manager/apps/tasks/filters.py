@@ -1,4 +1,4 @@
-from task_manager.apps.tools import gettext_lazy
+from task_manager.tools import gettext_lazy
 from django_filters import FilterSet, BooleanFilter, ModelChoiceFilter
 from django.forms import CheckboxInput
 from task_manager.apps.statuses.models import Status

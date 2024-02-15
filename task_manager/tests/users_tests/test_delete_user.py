@@ -1,4 +1,4 @@
-from task_manager.apps.tools import TransactionTestCase, reverse_lazy
+from task_manager.tools import TransactionTestCase, reverse_lazy
 from task_manager.apps.users.models import User
 
 

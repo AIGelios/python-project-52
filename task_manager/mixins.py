@@ -1,4 +1,4 @@
-from task_manager.apps.tools import (
+from task_manager.tools import (
     gettext_lazy,
     messages,
     redirect,
