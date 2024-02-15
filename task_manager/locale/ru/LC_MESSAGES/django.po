@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-15 13:19+0500\n"
+"POT-Creation-Date: 2024-02-15 15:29+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,7 +69,7 @@ msgstr "Статус"
 #: task_manager/apps/tasks/filters.py:19 task_manager/apps/tasks/forms.py:20
 #: task_manager/templates/tasks/details.html:23
 #: task_manager/templates/tasks/index.html:24
-msgid "Performer"
+msgid "Executor"
 msgstr "Исполнитель"
 
 #: task_manager/apps/tasks/filters.py:24

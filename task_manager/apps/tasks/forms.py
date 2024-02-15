@@ -10,13 +10,13 @@ class TaskForm(ModelForm):
             'name',
             'description',
             'status',
-            'performer',
-            'labels'
+            'executor',
+            'label'
         )
         labels = dict(
             name=gettext_lazy('Name'),
             description=gettext_lazy('Description'),
             status=gettext_lazy('Status'),
-            performer=gettext_lazy('Performer'),
-            labels=gettext_lazy('Labels'),
+            performer=gettext_lazy('Executor'),
+            label=gettext_lazy('Labels'),
         )

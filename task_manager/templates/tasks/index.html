@@ -21,7 +21,7 @@
                     <th>{% translate "Name" %}</th>
                     <th>{% translate "Status" %}</th>
                     <th>{% translate "Author" %}</th>
-                    <th>{% translate "Performer" %}</th>
+                    <th>{% translate "Executor" %}</th>
                     <th>{% translate "Created at" %}</th>
                     <th>{% translate "Actions" %}</th>
                 </tr>
@@ -33,7 +33,7 @@
                     <td><a href="{% url 'task_detail' task.id %}">{{ task.name }}</a></td>
                     <td>{{ task.status }}</td>
                     <td>{{ task.author }}</td>
-                    <td>{{ task.performer }}</td>
+                    <td>{{ task.executor }}</td>
                     <td>{{ task.created_at|date:"d.m.Y H:i" }}</td>
                     <td>
                         <a href="{% url 'update_task' task.id %}">{% translate "Update" %}</a><br>

@@ -13,12 +13,12 @@ class TaskFilterSet(FilterSet):
         required=False,
         label=gettext_lazy('Status'),
     )
-    performer = ModelChoiceFilter(
+    executor = ModelChoiceFilter(
         queryset=User.objects.all(),
         required=False,
-        label=gettext_lazy('Performer'),
+        label=gettext_lazy('Executor'),
     )
-    labels = ModelChoiceFilter(
+    label = ModelChoiceFilter(
         queryset=Label.objects.all(),
         required=False,
         label=gettext_lazy('Label'),

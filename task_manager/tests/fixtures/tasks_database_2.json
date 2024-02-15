@@ -1,0 +1,150 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "username": "Username1",
+            "first_name": "Name1",
+            "last_name": "Surname1"
+        }
+    },
+
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "username": "Username2",
+            "first_name": "Name2",
+            "last_name": "Surname2"
+        }
+    },
+
+    {
+        "model": "statuses.status",
+        "pk": 1,
+        "fields": {
+            "name": "Test status 1",
+            "created_at": "2024-02-12T15:16:39.083Z"
+        }
+    },
+
+    {
+        "model": "statuses.status",
+        "pk": 2,
+        "fields": {
+            "name": "Test status 2",
+            "created_at": "2024-02-12T15:16:39.083Z"
+        }
+    },
+
+    {
+        "model": "tasks.task",
+        "pk": 1,
+        "fields": {
+            "name": "Test task 1",
+            "created_at": "2024-02-12T15:16:40.083Z",
+            "author": 1,
+            "status": 1,
+            "executor": 2
+        }
+    },
+
+    {
+        "model": "tasks.task",
+        "pk": 2,
+        "fields": {
+            "name": "Test task 2",
+            "created_at": "2024-02-12T15:16:40.083Z",
+            "author": 2,
+            "status": 2,
+            "executor": 2
+        }
+    },
+
+    {
+        "model": "tasks.task",
+        "pk": 3,
+        "fields": {
+            "name": "Test task 3",
+            "created_at": "2024-02-12T15:16:40.083Z",
+            "author": 2,
+            "status": 1,
+            "executor": 1
+        }
+    },
+
+    {
+        "model": "tasks.task",
+        "pk": 4,
+        "fields": {
+            "name": "Test task 4",
+            "created_at": "2024-02-12T15:16:40.083Z",
+            "author": 2,
+            "status": 1,
+            "executor": 1
+        }
+    },
+
+    {
+        "model": "labels.label",
+        "pk": 1,
+        "fields": {
+            "created_at": "2024-02-14T08:41:56.579Z",
+            "name": "Test label 1"
+        }
+    },
+
+    {
+        "model": "labels.label",
+        "pk": 2,
+        "fields": {
+            "created_at": "2024-02-15T08:41:56.579Z",
+            "name": "Test label 2"
+        }
+    },
+
+    {
+        "model": "tasks.TaskLabel",
+        "pk": 1,
+        "fields": {
+            "task": 2,
+            "label": 1
+        }
+    },
+
+    {
+        "model": "tasks.TaskLabel",
+        "pk": 2,
+        "fields": {
+            "task": 3,
+            "label": 1
+        }
+    },
+
+    {
+        "model": "tasks.TaskLabel",
+        "pk": 3,
+        "fields": {
+            "task": 4,
+            "label": 1
+        }
+    },
+
+    {
+        "model": "tasks.TaskLabel",
+        "pk": 4,
+        "fields": {
+            "task": 3,
+            "label": 2
+        }
+    },
+
+    {
+        "model": "tasks.TaskLabel",
+        "pk": 5,
+        "fields": {
+            "task": 4,
+            "label": 2
+        }
+    }
+]

@@ -27,7 +27,7 @@ class CreateTaskTest(TransactionTestCase):
                 'description': 'Make something',
                 'author': 2,
                 'status': 1,
-                'performer': 1,
+                'executor': 1,
             },
         )
         tasks = Task.objects.all()
@@ -37,7 +37,7 @@ class CreateTaskTest(TransactionTestCase):
         self.assertEqual(task.name, 'Test task 1')
         self.assertEqual(task.author.pk, 1)
         self.assertEqual(task.status.pk, 1)
-        self.assertEqual(task.performer.pk, 2)
+        self.assertEqual(task.executor.pk, 2)
 
     def test_create_task_with_login(self):
         self.client.force_login(user=User.objects.get(pk=2))
@@ -49,7 +49,7 @@ class CreateTaskTest(TransactionTestCase):
                 'description': 'Make something',
                 'author': 2,
                 'status': 1,
-                'performer': 1,
+                'executor': 1,
             },
         )
         tasks = Task.objects.all()
@@ -59,4 +59,4 @@ class CreateTaskTest(TransactionTestCase):
         self.assertEqual(task.name, 'Test task 2')
         self.assertEqual(task.author.pk, 2)
         self.assertEqual(task.status.pk, 1)
-        self.assertEqual(task.performer.pk, 1)
+        self.assertEqual(task.executor.pk, 1)

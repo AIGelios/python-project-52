@@ -22,7 +22,7 @@ class TaskDetailTest(TransactionTestCase):
     def test_task_detail_with_login(self):
         author = User.objects.get(pk=1)
         self.client.force_login(user=author)
-        performer = User.objects.get(pk=2)
+        executor = User.objects.get(pk=2)
         tasks = Task.objects.all()
         statuses = Status.objects.all()
         self.assertEqual(tasks.count(), 1)
@@ -30,5 +30,5 @@ class TaskDetailTest(TransactionTestCase):
         task = tasks.first()
         status = statuses.first()
         self.assertEqual(task.author, author)
-        self.assertEqual(task.performer, performer)
+        self.assertEqual(task.executor, executor)
         self.assertEqual(task.status, status)

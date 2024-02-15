@@ -18,12 +18,12 @@ class Task(Model):
         null=False,
         related_name='task_author',
     )
-    performer = ForeignKey(
+    executor = ForeignKey(
         to=User,
         on_delete=PROTECT,
         blank=True,
         null=True,
-        related_name='task_performer',
+        related_name='task_executor',
     )
     status = ForeignKey(
         to=Status,
@@ -31,7 +31,7 @@ class Task(Model):
         blank=False,
         null=True
     )
-    labels = ManyToManyField(
+    label = ManyToManyField(
         to=Label,
         through='TaskLabel',
         blank=True
