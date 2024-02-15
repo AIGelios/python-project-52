@@ -66,7 +66,8 @@ msgstr "Невозможно удалить статус, потому что о
 msgid "Status"
 msgstr "Статус"
 
-#: task_manager/apps/tasks/filters.py:19 task_manager/apps/tasks/forms.py:20
+#: task_manager/apps/tasks/filters.py:19
+#: task_manager/apps/tasks/forms.py:20
 #: task_manager/templates/tasks/details.html:23
 #: task_manager/templates/tasks/index.html:24
 msgid "Executor"

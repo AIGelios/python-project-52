@@ -32,12 +32,12 @@ class FiltersTest(TransactionTestCase):
     def test_tasks_index_with_status_filter(self):
         self.client.force_login(user=User.objects.get(pk=1))
 
-        response = self.client.get(tasks_index_url, {'status':1})
+        response = self.client.get(tasks_index_url, {'status': 1})
         tasks = response.context['object_list']
         self.assertEqual(tasks.count(), 3)
         self.assertEqual({x.status_id for x in tasks}, {1})
 
-        response = self.client.get(tasks_index_url, {'status':2})
+        response = self.client.get(tasks_index_url, {'status': 2})
         tasks = response.context['object_list']
         self.assertEqual(tasks.count(), 1)
         self.assertEqual({x.status_id for x in tasks}, {2})
@@ -45,12 +45,12 @@ class FiltersTest(TransactionTestCase):
     def test_tasks_index_with_executor_filter(self):
         self.client.force_login(user=User.objects.get(pk=1))
 
-        response = self.client.get(tasks_index_url, {'executor':1})
+        response = self.client.get(tasks_index_url, {'executor': 1})
         tasks = response.context['object_list']
         self.assertEqual(tasks.count(), 2)
         self.assertEqual({x.executor_id for x in tasks}, {1})
 
-        response = self.client.get(tasks_index_url, {'executor':2})
+        response = self.client.get(tasks_index_url, {'executor': 2})
         tasks = response.context['object_list']
         self.assertEqual(tasks.count(), 2)
         self.assertEqual({x.executor_id for x in tasks}, {2})
@@ -58,11 +58,11 @@ class FiltersTest(TransactionTestCase):
     def test_tasks_index_with_label_filter(self):
         self.client.force_login(user=User.objects.get(pk=1))
 
-        response = self.client.get(tasks_index_url, {'label':1})
+        response = self.client.get(tasks_index_url, {'label': 1})
         tasks = response.context['object_list']
         self.assertEqual(tasks.count(), 3)
 
-        response = self.client.get(tasks_index_url, {'label':2})
+        response = self.client.get(tasks_index_url, {'label': 2})
         tasks = response.context['object_list']
         self.assertEqual(tasks.count(), 2)
 

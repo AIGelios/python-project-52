@@ -17,6 +17,6 @@ class TaskForm(ModelForm):
             name=gettext_lazy('Name'),
             description=gettext_lazy('Description'),
             status=gettext_lazy('Status'),
-            performer=gettext_lazy('Executor'),
+            executor=gettext_lazy('Executor'),
             label=gettext_lazy('Labels'),
         )
