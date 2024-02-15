@@ -58,11 +58,11 @@ class FiltersTest(TransactionTestCase):
     def test_tasks_index_with_label_filter(self):
         self.client.force_login(user=User.objects.get(pk=1))
 
-        response = self.client.get(tasks_index_url, {'label': 1})
+        response = self.client.get(tasks_index_url, {'labels': 1})
         tasks = response.context['object_list']
         self.assertEqual(tasks.count(), 3)
 
-        response = self.client.get(tasks_index_url, {'label': 2})
+        response = self.client.get(tasks_index_url, {'labels': 2})
         tasks = response.context['object_list']
         self.assertEqual(tasks.count(), 2)
 

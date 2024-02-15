@@ -18,7 +18,7 @@ class TaskFilterSet(FilterSet):
         required=False,
         label=gettext_lazy('Executor'),
     )
-    label = ModelChoiceFilter(
+    labels = ModelChoiceFilter(
         queryset=Label.objects.all(),
         required=False,
         label=gettext_lazy('Label'),

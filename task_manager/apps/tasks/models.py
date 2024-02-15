@@ -31,10 +31,12 @@ class Task(Model):
         blank=False,
         null=True
     )
-    label = ManyToManyField(
+    labels = ManyToManyField(
         to=Label,
         through='TaskLabel',
-        blank=True
+        through_fields=('task', 'label'),
+        related_name='labels',
+        blank=True,
     )
 
     def __str__(self):
