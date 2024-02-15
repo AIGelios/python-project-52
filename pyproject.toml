@@ -15,10 +15,10 @@ django-extensions = "^3.2.3"
 django-filter = "^23.5"
 psycopg2-binary = "^2.9.9"
 gunicorn = "^21.2.0"
-rollbar = "^1.0.0"
 python-dotenv = "^1.0.1"
 whitenoise = "^6.6.0"
 ipython = "^8.20.0"
+rollbar = "^0.16.3"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.4"
