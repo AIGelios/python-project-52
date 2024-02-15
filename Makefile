@@ -35,19 +35,14 @@ migrate:
 dev-server:
 	poetry run python3 manage.py runserver
 
+db-clean:
+	poetry run python3 manage.py flush --noinput
+
 deploy:
 	make install
+	make db-clean
 	make migrate
 
 PORT ?= 8000
 product-server:
 	poetry run gunicorn -w 5 -b 0.0.0.0:$(PORT) task_manager.wsgi
-
-
-fast-commit:
-	git add *
-	git commit -m 'fast commit: minor fixes'
-	git push
-
-db-clean:
-	poetry run python3 manage.py flush --noinput
