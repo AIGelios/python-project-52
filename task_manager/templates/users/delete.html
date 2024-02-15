@@ -4,7 +4,8 @@
 {% load i18n %}
 
 {% block content %}
-    <h2 class="text-center my-4">{% translate 'User deletion' %}</h2>
+    <h2 class="text-center display-5">{% translate 'User deletion' %}</h2>
+    <hr>
     <form method="post">
         <p>{% translate 'Confirm deletion of' %} {{ user.full_name }}?</p>
         {% csrf_token %}
