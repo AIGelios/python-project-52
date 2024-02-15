@@ -5,7 +5,7 @@ from .models import Label
 
 class LabelForm(ModelForm):
     name = CharField(
-        max_length=255,
+        max_length=100,
         required=True,
         label=gettext_lazy('Name')
     )

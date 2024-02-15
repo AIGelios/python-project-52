@@ -11,7 +11,7 @@ from task_manager.apps.statuses.models import Status
 
 
 class Task(Model):
-    name = CharField(max_length=400)
+    name = CharField(max_length=150)
     created_at = DateTimeField(auto_now_add=True)
     description = TextField(max_length=16384)
     author = ForeignKey(
