@@ -26,6 +26,7 @@ jobs:
           pip install poetry
           make install
           pip install coverage
+          make migrate
       - name: Test & calculate coverage
         run: |
           poetry run python3 -m coverage run manage.py test
