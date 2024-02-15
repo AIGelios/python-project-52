@@ -4,8 +4,6 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.forms import AuthenticationForm
 from .mixins import SuccessMessageMixin
 
-from django.http import HttpResponse
-
 
 class HomePageView(TemplateView):
     template_name = 'index.html'
