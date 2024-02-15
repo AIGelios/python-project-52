@@ -48,3 +48,6 @@ fast-commit:
 	git add *
 	git commit -m 'fast commit: minor fixes'
 	git push
+
+db-clean:
+	poetry run python3 manage.py flush --noinput
