@@ -15,6 +15,26 @@
     "fields": {
       "created_at": "2024-02-07T08:41:56.579Z",
       "name": "Test status 1"
-      }
     }
+  },
+  {
+    "model": "statuses.status",
+    "pk": 2,
+    "fields": {
+      "created_at": "2024-02-07T08:41:56.579Z",
+      "name": "Test status 2"
+    }
+  },
+  {
+    "model": "tasks.task",
+    "pk": 1,
+    "fields": {
+      "name": "Test task",
+      "description": "About task",
+      "created_at": "2022-02-15T15:16:39.083Z",
+      "author": 1,
+      "status": 2,
+      "performer": 1
+    }
+  }
 ]

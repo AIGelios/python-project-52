@@ -20,18 +20,18 @@ class UpdateStatusTest(TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_update_status_without_login(self):
-        self.assertEqual(Status.objects.all().count(), 1)
-        self.client.post(update_status_url(1), {'name': 'Test status 2'})
+        self.assertEqual(Status.objects.all().count(), 2)
+        self.client.post(update_status_url(1), {'name': 'Test status 3'})
         statuses = Status.objects.all()
-        self.assertEqual(statuses.count(), 1)
+        self.assertEqual(statuses.count(), 2)
         self.assertEqual(statuses.first().pk, 1)
         self.assertEqual(statuses.first().name, 'Test status 1')
 
     def test_update_status_with_login(self):
         self.client.force_login(user=User.objects.get(pk=1))
-        self.assertEqual(Status.objects.all().count(), 1)
-        self.client.post(update_status_url(1), {'name': 'Test status 2'})
+        self.assertEqual(Status.objects.all().count(), 2)
+        self.client.post(update_status_url(1), {'name': 'Test status 3'})
         statuses = Status.objects.all()
-        self.assertEqual(statuses.count(), 1)
+        self.assertEqual(statuses.count(), 2)
         self.assertEqual(statuses.first().pk, 1)
-        self.assertEqual(statuses.first().name, 'Test status 2')
+        self.assertEqual(statuses.first().name, 'Test status 3')

@@ -1,13 +1,10 @@
 from django.db.models import (
-    Model,
-    CharField,
-    TextField,
-    DateTimeField,
-    ForeignKey,
-    PROTECT,
+    Model, CharField, TextField, DateTimeField,
+    ForeignKey, ManyToManyField, PROTECT, CASCADE,
 )
 from task_manager.apps.users.models import User
 from task_manager.apps.statuses.models import Status
+from task_manager.apps.labels.models import Label
 
 
 class Task(Model):
@@ -34,3 +31,16 @@ class Task(Model):
         blank=False,
         null=True
     )
+    labels = ManyToManyField(
+        to=Label,
+        through='TaskLabel',
+        blank=True
+    )
+
+    def __str__(self):
+        return self.name
+
+
+class TaskLabel(Model):
+    task = ForeignKey(to=Task, on_delete=CASCADE)
+    label = ForeignKey(to=Label, on_delete=PROTECT)

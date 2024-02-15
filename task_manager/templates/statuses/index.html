@@ -20,7 +20,7 @@
                 <tr>
                     <td>{{ status.id }}</td>
                     <td>{{ status.name }}</td>
-                    <td>{{ status.created_at }}</td></td>
+                    <td>{{ status.created_at|date:"d.m.Y H:i" }}</td></td>
                     <td>
                         <a href="{% url 'update_status' status.id %}">{% translate "Update" %}</a>
                         <br>

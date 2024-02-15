@@ -3,18 +3,55 @@
         "model": "auth.user",
         "pk": 1,
         "fields": {
-        "first_name": "Name1",
-        "last_name": "Surname1",
-        "username": "Username1",
-        "password": "goodp@ssword"
+            "first_name": "Name1",
+            "last_name": "Surname1",
+            "username": "Username1",
+            "password": "goodp@ssword"
         }
     },
     {
         "model": "labels.label",
         "pk": 1,
         "fields": {
-        "created_at": "2024-02-14T08:41:56.579Z",
-        "name": "Test label 1"
+            "created_at": "2024-02-14T08:41:56.579Z",
+            "name": "Test label 1"
+        }
+    },
+    {
+        "model": "labels.label",
+        "pk": 2,
+        "fields": {
+            "created_at": "2024-02-15T08:41:56.579Z",
+            "name": "Test label 2"
+        }
+    },
+    {
+        "model": "statuses.status",
+        "pk": 1,
+        "fields": {
+            "created_at": "2024-02-07T08:41:56.579Z",
+            "name": "Test status 1"
+        }
+    },
+    {
+        "model": "tasks.task",
+        "pk": 1,
+        "fields": {
+            "name": "Test task",
+            "description": "About task",
+            "created_at": "2022-02-15T15:16:39.083Z",
+            "author": 1,
+            "status": 1,
+            "performer": 1
+        }
+    },
+    {
+        "model": "tasks.TaskLabel",
+        "pk": 1,
+        "fields": {
+            "task": 1,
+            "label": 2
         }
     }
+
 ]

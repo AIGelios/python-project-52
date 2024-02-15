@@ -1,12 +1,12 @@
 from task_manager.apps.tools import reverse_lazy, gettext_lazy  # noqa
 from .models import Task
 from .forms import TaskForm
+from .filters import TaskFilterSet
 from django.views.generic import (
     DetailView,
     CreateView,
     UpdateView,
     DeleteView,
-    ListView,
 )
 from django_filters.views import FilterView  # noqa
 from task_manager.mixins import (
@@ -18,9 +18,10 @@ from task_manager.apps.users.models import User
 
 
 # Create your views here.
-class TasksIndexView(AuthenticationRequiredMixin, ListView):
+class TasksIndexView(AuthenticationRequiredMixin, FilterView):
     template_name = "tasks/index.html"
     model = Task
+    filterset_class = TaskFilterSet
 
 
 class TaskDetailView(AuthenticationRequiredMixin, DetailView):

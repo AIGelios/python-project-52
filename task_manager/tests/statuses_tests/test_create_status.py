@@ -19,18 +19,18 @@ class CreateStatusTest(TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_create_status_without_login(self):
-        self.assertEqual(Status.objects.all().count(), 1)
-        self.client.post(create_status_url, {'name': 'Test status 2'})
-        statuses = Status.objects.all()
-        self.assertEqual(statuses.count(), 1)
-        self.assertEqual(statuses.last().pk, 1)
-        self.assertNotEqual(statuses.last().name, 'Test status 2')
-
-    def test_create_status_with_login(self):
-        self.client.force_login(user=User.objects.get(pk=1))
-        self.assertEqual(Status.objects.all().count(), 1)
-        self.client.post(create_status_url, {'name': 'Test status 2'})
+        self.assertEqual(Status.objects.all().count(), 2)
+        self.client.post(create_status_url, {'name': 'Test status 3'})
         statuses = Status.objects.all()
         self.assertEqual(statuses.count(), 2)
         self.assertEqual(statuses.last().pk, 2)
-        self.assertEqual(statuses.last().name, 'Test status 2')
+        self.assertNotEqual(statuses.last().name, 'Test status 3')
+
+    def test_create_status_with_login(self):
+        self.client.force_login(user=User.objects.get(pk=1))
+        self.assertEqual(Status.objects.all().count(), 2)
+        self.client.post(create_status_url, {'name': 'Test status 3'})
+        statuses = Status.objects.all()
+        self.assertEqual(statuses.count(), 3)
+        self.assertEqual(statuses.last().pk, 3)
+        self.assertEqual(statuses.last().name, 'Test status 3')

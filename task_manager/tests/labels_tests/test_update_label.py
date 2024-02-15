@@ -20,18 +20,18 @@ class UpdateLabelTest(TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_update_label_without_login(self):
-        self.assertEqual(Label.objects.all().count(), 1)
-        self.client.post(update_label_url(1), {'name': 'Test label 2'})
+        self.assertEqual(Label.objects.all().count(), 2)
+        self.client.post(update_label_url(1), {'name': 'Test label 3'})
         labels = Label.objects.all()
-        self.assertEqual(labels.count(), 1)
+        self.assertEqual(labels.count(), 2)
         self.assertEqual(labels.first().pk, 1)
         self.assertEqual(labels.first().name, 'Test label 1')
 
     def test_update_label_with_login(self):
         self.client.force_login(user=User.objects.get(pk=1))
-        self.assertEqual(Label.objects.all().count(), 1)
-        self.client.post(update_label_url(1), {'name': 'Test label 2'})
+        self.assertEqual(Label.objects.all().count(), 2)
+        self.client.post(update_label_url(1), {'name': 'Test label 3'})
         labels = Label.objects.all()
-        self.assertEqual(labels.count(), 1)
+        self.assertEqual(labels.count(), 2)
         self.assertEqual(labels.first().pk, 1)
-        self.assertEqual(labels.first().name, 'Test label 2')
+        self.assertEqual(labels.first().name, 'Test label 3')
