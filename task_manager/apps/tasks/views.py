@@ -53,7 +53,7 @@ class TaskUpdateView(
     template_name = "tasks/update.html"
     model = Task
     form_class = TaskForm
-    success_message = ('Task updated successfully')
+    success_message = gettext_lazy('Task updated successfully')
     success_url = reverse_lazy('tasks_index')
 
 

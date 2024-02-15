@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-15 19:10+0500\n"
+"POT-Creation-Date: 2024-02-15 22:00+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,6 +95,10 @@ msgstr "Метки"
 msgid "Task created successfully"
 msgstr "Задача успешно создана"
 
+#: task_manager/apps/tasks/views.py:56
+msgid "Task updated successfully"
+msgstr "Задача успешно изменена"
+
 #: task_manager/apps/tasks/views.py:69
 msgid "Task deleted successfully"
 msgstr "Задача успешно удалена"
@@ -147,23 +151,23 @@ msgstr "Исходный код проекта"
 msgid "Admin page"
 msgstr "Раздел администратора"
 
-#: task_manager/templates/index.html:12 task_manager/templates/index.html:20
+#: task_manager/templates/index.html:12 task_manager/templates/index.html:21
 #: task_manager/templates/navbar.html:5
 msgid "Task manager"
 msgstr "Менеджер задач"
 
-#: task_manager/templates/index.html:22
+#: task_manager/templates/index.html:23
 msgid "About task manager"
 msgstr ""
 "Менеджер задач – система управления задачами. Она позволяет ставить задачи, "
 "назначать исполнителей и менять их статусы. Для работы с системой требуется "
 "регистрация и аутентификация"
 
-#: task_manager/templates/index.html:24
+#: task_manager/templates/index.html:25
 msgid "Go to tasks"
 msgstr "Перейти в задачи"
 
-#: task_manager/templates/index.html:26
+#: task_manager/templates/index.html:27
 msgid "Login and start using"
 msgstr "Войти и начать пользоваться"
 
